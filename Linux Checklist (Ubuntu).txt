@@ -1,0 +1,69 @@
+ON START:
+- Scan ReadME
+- View forensic questions
+- WRITE DOWN EVERYTHING YOU FIND
+	* WRITE DOWN PASSWORD CHANGES
+	* WRITE DOWN SHUT/REMOVED DOWN PROCCESS
+	* WRITE DOWN UNUSUAL THINGS
+
+EASY POINTS:
+- Search for and remove media files (like .mp3, .mp4, .mov, etc.)
+	* locate *.mp3
+	* cd {path to files}
+	* rm {file_name}
+- Install Software Updates
+	* Use Software Updater
+- Check Users
+	*** COPY etc/password and etc/group
+		$ Use the cp command to copy it to Desktop incase you need it
+	* Deleted Un-Authorized Users
+	* Remove or add admin if neccessary
+- Add Users to New Groups (if in readme)
+	* sudo gpasswd -a {user} {group}
+- Turn on UFW (Uncomplicated Fire Wall)
+	* ufw enable
+- Set Auto Check Updates
+	* Go to Sofware and Updates
+
+PASSWORDS:
+- Check for bad Admin passwords in ReadMe
+- Change passwords if neccessary
+	* passwrd {user to change}
+
+PASSWORD POLICY:
+- Go to Manage Users
+	* Manually change all users passwords
+		$ 12 Characters, 1 Number, 1 Special Character
+		$$$ DO NOT CHANGE DEFAULT USERS'S (YOUR) PASSWORD
+- Pam Files?
+
+REMOVE PROGRAMS:
+- Check in Applications Menu for Unauthorized Programs
+	* EX: Wireshark, ophcrack, nmap, zenmap, nginx
+	* sudo apt remove {program}
+	* sudo apt autoremove (neccessary to get points sometimes)
+
+CRONTAB:
+- Check crontab for Backdoors
+	* sudo find /var/spool/cron -type f -ls 
+	* login as suspicous user (sudo su {user})
+	* crontab -l
+	* delete or comment lines as necessary
+		$ sudo su
+		$ crontab -u {user} -e
+			^ Editor is VI not nano or gedit
+
+CHECK NETSTAT:
+- Check Programs that are unning on netstat
+	* sudo su
+	* apt install net-tools
+	* netstat -anp | grep LISTEN | grep -v LISTENING
+- Shutdown Unauthorized Programs (if neccessary)
+
+SPECIAL CASES:
+- If SSH is allowed in ReadMe
+	* Go to etc/ssh/ssh_config
+		$ PermitRootLogin no
+
+
+
