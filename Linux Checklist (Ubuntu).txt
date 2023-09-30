@@ -1,3 +1,4 @@
+sudo git clone https://github.com/Scorpion542389/CyberPatriot.git
 ON START:
 - Scan ReadME
 - View forensic questions
@@ -18,12 +19,13 @@ EASY POINTS:
 		$ Use the cp command to copy it to Desktop incase you need it
 	* Deleted Un-Authorized Users
 	* Remove or add admin if neccessary
-- Add Users to New Groups (if in readme)
-	* sudo gpasswd -a {user} {group}
 - Turn on UFW (Uncomplicated Fire Wall)
 	* ufw enable
 - Set Auto Check Updates
 	* Go to Sofware and Updates
+GROUPS:
+- Add Users to New Groups (if in readme)
+	* sudo gpasswd -a {user} {group}
 
 PASSWORDS:
 - Check for bad Admin passwords in ReadMe
