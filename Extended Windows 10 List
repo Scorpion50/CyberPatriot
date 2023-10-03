@@ -1,0 +1,136 @@
+ExtendedWindows 10 Checklist Version 1
+
+Created by Platte County Cyberpatriot Team A
+
+1. WAIT FOR EVERYONE BEFORE BOOTING IMAGE!
+2. Run CCS Scoring Report (Make sure to run both host and CCS server checks)
+3. Get the flash drive
+4. Boot!
+5. Run the prepared flash drive
+  5.1. Install updates while reading README
+  5.2. Install Malwarebytes, BitDefender, CCleaner, IOBitUninstaller
+  5.3. Get the Internet Browsers that you are supposed to have
+  5.4. Get “Script”
+  5.5. Check everything in Windows Defender
+6. Read the README
+  6.1. Mark important information about what you need to do and save the password
+7. ANSWER FORENSIC QUESTIONS
+8. Run “Script” and installed software
+9. Password Policy
+  9.1. Enforce password history: 24
+  9.2. Maximum password age: 60
+  9.3. Minimum password age 5
+  9.4. Minimum password length: 10
+  9.5. Password must meet complexity requirements: Enabled
+  9.6. Store password using reversible encryption: Disabled
+10. Lockout Policy
+  10.1. Account lockout duration: 30 min
+  10.2. Account lockout threshold: 10
+  10.3. Reset account lockout counter after: 30 min
+11. Check user settings
+  11.1. All users should have their passwords changed
+  11.2. All unauthorized users should have ‘Account is disabled
+12. Check ALL the groups(Computer Management)
+  12.1. ‘Administrators group should ONLY have AUTHORIZED admins.
+  12.2. ‘Guests’ groups should ONLY have ‘Guest’ in it
+  12.3. Add groups/users the README wants to be added
+  12.4. If the README wants only certain users to use the RDP then add ONLY those users to the
+    ‘Remote Desktop Users’ group
+13. Use SmartScreen online services(Security and Maintenance)=ON
+14. Wi-Fi Sense (Network&Internet)
+  14.1. Automatically connect to suggested open hotspots=OFF
+  14.2. Automatically connect to hotspots temporarily to see if paid network services are available =OFF
+15. Turn UAC to max(Change User Account Control Settings)
+16. Change Adapter settings(Disabling IPv6 and other services) =Uncheck all of these (Go to
+  Network&Internet in settings - Ethernet - Change adapter Options - Right-click Properties)
+  16.1. Client for MS Networks
+  16.2. File and Printer Sharing for Microsoft Networks
+  16.3. QoS
+  16.4. Microsoft Network Adapter Multiplexor Protocol
+  16.5. Microsoft LLDP Protocol Driver
+  16.6. Link Layer Topology Discovery Mapper IO Driver
+  16.7. Link Layer Topology Discovery Responder
+  16.8. Internet protocol version 6
+  16.9. Internet protocol version 4 (TCP IPv4), click Properties, click Advanced
+  16.10. ‘DNS’ tab, uncheck mark ‘register this connection address in DNS’
+  16.11. ‘WINS’ tab, select ‘Disable NetBIOS over TCP/IP’
+17. Disable port 1900 UPnp
+  17.1. Open Windows Defender firewall with advanced security.
+  17.2. Click Inbound rules - New rule - Port - Next - UDP - Specific local points (1900) - Next - Block the
+  connection - Next - Check all - Next - Name = SSDP Block 1900 - Finish
+18. Windows Services
+  18.1. UPnP Device Host: Stopped - Disabled
+  18.2. RDP: Depends on README
+  18.3. Telnet: Stopped - Disabled
+  18.4. Windows Event Collector: Running - Automatic
+  18.5. Remote Registry: Stopped - Disabled
+  18.6. Windows update Running - Automatic
+19. Windows Features
+  19.1. Control Panel - Programs - Turn Windows features on or off
+  19.2. Things to never have on
+  19.2.1. Telnet client\server
+  19.2.2. SNMP
+  19.2.3. RIP Listener
+  19.2.4. Client for NFS
+  19.2.5. Internet Information Services
+  19.2.6. World Wide Web Services
+  19.3. If the Windows FTP server is checked make sure that TFTP is not checked
+  19.4. Uncheck SMB 1.0/CIFS File Sharing Support
+20. Run Net Share
+  20.1. Only 3 shares should be shared unless README says otherwise
+  20.1.1. ADMIN$
+  20.1.2. C$
+  20.1.3. IPC$
+21. Turn off Autoplay (Settings - devices)
+22. Run Command netplwiz
+23. Disable OneDrive on Startup(task manager)
+24. Screen Saver (locking)
+  24.1. Search for Screen Saver= wait 10 min and checkmark “On resume display logon screen
+25. Change all Auditing to Success/Failure
+26. User Rights Assignment (Local Security Policy - Local policy - User rights Assignment
+  26.1. Access Credential Manager as a trusted caller = No one
+  26.2. Access the computer from the network = Administrators
+  26.3. Act as park of the operating system = No one
+  26.4. Adjust memory quotas for a process = Administrators, Local Service, Network service
+  26.5. Allow log-on locally = Administrators, Users
+  26.6. Allow through Remote Desktop Services = Administrators, Remote Desktop Users
+  26.7. Back-up files and directories = Administrators
+  26.8. Change system time = Administrators, local service
+  26.9. Change time zone = Administrators, local service, users
+  26.10. Create a page file = Administrators
+  26.11. Create a token object = No one
+  26.12. Create global objects =Administratiors, Local Service, Network Service, Service
+  26.13. Create permanent shared objects = No one
+  26.14. Create symbolic links = Administrators
+  26.15. Debug programs = Administrators
+  26.16. Deny access to this computer from the network = Guest, Local account
+  26.17. Deny log on as a batch job = Guest
+  26.18. Deny log-on as a service = Guest
+  26.19. Deny log on locally = Guest
+  26.20. Deny log-on through Remote Desktop Services = Guest, Local account
+  26.21. Enable computer and user accounts to be trusted for delegation = No one
+  26.22. Force shutdown from a remote system
+  26.23. Generate security audits = Local service, network service
+  26.24. Impersonate a client after authentication = Administrators, Local service, network service, service
+  26.25. Increase scheduling priority = Administrators
+  26.26. Load and unload device drivers = Administrators
+  26.27. Lock pages in memory = No one
+  26.28. Log on as a batch job = Administrators
+  26.29. Log on as a service = No one
+  26.30. Manage auditing and security log = Administrators
+  26.31. Modify an object label = No one
+  26.32. Modify firmware environment values = Administrators
+  26.33. Perform volume maintenance tasks = Administrators
+  26.34. Profile single process = Administrators
+  26.35. Profile system performance = Administrator. NT Service\WdisServiceHost
+  26.36. Replace a process level token = Local service, Network service
+  26.37. Restore files and directories = Administrators
+  26.38. Shut down the system = Administrators, Users
+  26.39. Take ownership of file or other objects = Administrators
+27. Limit local use of blank password to console only[enabled]
+28. Do not allow anonymous enumeration of SAM accounts [enabled]
+29. Remote Assistance connections have been disabled (control pannel -system)
+30. Windows FTP service has been stopped and disabled
+31. Make sure that ALL software has been updated
+32. Check the scoring report and
+33. You’re Done (with the checklist anyway)
