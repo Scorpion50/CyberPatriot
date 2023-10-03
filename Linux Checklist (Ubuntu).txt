@@ -64,7 +64,7 @@ CHECK NETSTAT:
 
 SPECIAL CASES:
 - If SSH is allowed in ReadMe
-	* Go to etc/ssh/ssh_config
+	* Go to etc/ssh/sshd_config
 		$ PermitRootLogin no
 
 
