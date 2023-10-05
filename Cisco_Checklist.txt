@@ -1,0 +1,14 @@
+# IN PROGRESS
+
+ON LAUNCH
+- Read Overview
+  * It will contain what specifically you need to do.
+- Have notebook ready to write
+  * Write down the following
+    & Passwords
+    & IP Adresses
+    & Subnets (including subnet address, and first/last host)
+
+BASIC DEVICE CONFIG
+- Hostname
+  * Router(config): hostname R1
