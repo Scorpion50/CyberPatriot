@@ -1,0 +1,69 @@
+BEFORE START
+- Have notebook ready
+- Start when everyone is ready
+
+BASIC SWITCH & ROUTER CONFIG
+- Hostname
+  * Rename the router/switch to something easy to read
+    & Router(config)# hostname R1
+- Passwords
+  * Add the enable password
+    & R1(config)# enable secret [Password]
+    & WRITE THIS PASSWORD DOWN
+  * Add the console password
+    & R1(config)# line console 0
+    & R1(config-line)# password [Password]
+    &&& WRITE THIS PASSWORD DOWN
+    & R1(config-line)# login
+- Set Time-Out
+  * R1(config)# line vty 0 15
+  * R1(config-line)# exec-timeoute [minutes to time out]
+
+ENABLE ROUTER INTERFACES
+- Assign IP/Subnet to correct port (specified in README)
+- Repeat on all Router interfaces
+- Login Attempts  
+  * R1(config)# login block-for [block for in seconds] attempts [attempts] within [within how long]
+
+SWITCH SET UP
+- IP in interface VLAN 1
+  * S1(config)# int vlan 1
+  * S1(config-int)# ip address [address] [subnet]
+- Default Gateway
+  * S1(config)# ip default-gateway [IP]
+    & The IP should be the ip addfress that was assigned to the Router interfaces the switch is connected to.
+
+PC SET UP
+- Set IP
+  * Open Dekstop and click IP Configuration
+  * Fill in info as provided in README or by network plan
+- Testing
+  * Use command prompt for all testing
+  * tracert [target ip]
+    & Traces Packet Route
+  * ping [target ip]
+    & Pings Another Device
+    & If you can successfully ping all devices your network is properly set up
+  * ssh
+    & Used for SSH connections
+- Console (If CLI is disabled)
+  * Plug a console cable into the RS 232 on Desktop
+  * Plug other end to the target device's console port
+  * Go to terminal in PC Desktop
+  * This is the device's console now
+  
+ENABLE SSH
+- Set Username
+  * username [username] secret [password]
+  *** WRITE BOTH THE USERNAME AND PASSWORD DOWN
+- Set Domain Name (in README?)
+  * R1(config)# ip domain-name [domain name]
+- Generate Key
+  * R1(config-)# crypto generate key rsa
+  * 1024
+- Enable SSH Input (line vty)
+  * R1(config-line)# transport input SSH
+  *** R1(config-line)# login local (Without this command the username won't work)
+- Test in PC Terminal
+  * ssh -l [username] [target ip]
+  * Type the password when prompted
