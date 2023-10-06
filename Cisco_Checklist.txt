@@ -19,6 +19,9 @@ BASIC SWITCH & ROUTER CONFIG
   * R1(config)# line vty 0 15
   * R1(config-line)# exec-timeout [minutes to time out]
 - Turn off all unused ports
+- Copy running_config to startup_config
+ * R1# copy running_config startup_config
+  & When it asks if the location is correct just press enter
 
 ENABLE ROUTER INTERFACES
 - Assign IP/Subnet to the correct port (specified in README)
