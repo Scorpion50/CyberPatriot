@@ -1,4 +1,3 @@
-sudo git clone https://github.com/Scorpion542389/CyberPatriot.git
 ON START:
 - Scan ReadME
 - View forensic questions
