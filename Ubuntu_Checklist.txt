@@ -37,7 +37,11 @@ PASSWORD POLICY:
 	* Manually change all users passwords
 		$ 12 Characters, 1 Number, 1 Special Character
 		$$$ DO NOT CHANGE DEFAULT USERS'S (YOUR) PASSWORD
-- Pam Files?
+- Pam Files
+	* Change Passwords
+	* gedit (or) nano /etc/pam.d/common-passwd
+		$ add "remember=5" and "minle=8" on the line that says "pam_unix.so"
+		$ add "ucredit=-1, lcredit=-1, dcredit=-1, ocredit=-1" to the line that says "pam_cracklib.so"
 
 REMOVE PROGRAMS:
 - Check in Applications Menu for Unauthorized Programs
