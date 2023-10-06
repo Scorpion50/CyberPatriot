@@ -1,5 +1,5 @@
 BEFORE START
-- Have notebook ready
+- Have a notebook ready
 - Start when everyone is ready
 
 BASIC SWITCH & ROUTER CONFIG
@@ -17,10 +17,11 @@ BASIC SWITCH & ROUTER CONFIG
     & R1(config-line)# login
 - Set Time-Out
   * R1(config)# line vty 0 15
-  * R1(config-line)# exec-timeoute [minutes to time out]
+  * R1(config-line)# exec-timeout [minutes to time out]
+- Turn off all unused ports
 
 ENABLE ROUTER INTERFACES
-- Assign IP/Subnet to correct port (specified in README)
+- Assign IP/Subnet to the correct port (specified in README)
 - Repeat on all Router interfaces
 - Login Attempts  
   * R1(config)# login block-for [block for in seconds] attempts [attempts] within [within how long]
