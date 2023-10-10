@@ -1,0 +1,13 @@
+1. Make sure to check download checksum 
+2. Start with everyone with VMware Player 17.0.2 Home Screen with the image NOT booted
+3. Adjust VM Settings (Optional)
+4. Run CCS check on every device
+5. Refresh on later steps
+6. Boot VMs(Clock Starts)
+7. Enter IN UID
+8. Copy of the readme, forensic questions, and users on the flash drive and the host computer (this flash drive should be given to the 5th person after all items are copied)
+9. Highlight/Mark things that are important in the ReadME
+10. Patch system and auto-updates
+11. Finish updating
+12. Mark things that people should not change (EX: Things required for Forensics, Required Services, etc)
+13. Fith Person Compares Users and Unsolved Forensic Questions
