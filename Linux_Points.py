@@ -21,16 +21,6 @@ os.system("sudo locate *.mp3 >> changeLog.txt")
 print("Findings in changeLog.txt!")
 time.sleep(0.5)
 
-print("Checking for Bad Users")
-os.system("cat /etc/shadow | cut -d : -f 1 /etc/passwd >> mUsers.txt")
-for person in mUsers.txt:
-    if person in users.txt:
-        pass
-    else:
-        os.system(f"echo {person} is not allowed! >> changelog.txt")
-print("Findings in changelog.txt")
-time.sleep(0.5)
-
 print("Turning on Firewall")
 os.system("ufw enable")
 time.sleep(0.5)
