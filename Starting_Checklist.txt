@@ -3,7 +3,7 @@
 3. Adjust VM Settings (Optional)
 4. Run CCS check on every device
 5. Refresh on later steps
-6. Boot VMs(Clock Starts)
+6. Boot VMs(Clock Starts) (make sure to set timers)
 7. Enter IN UID
 8. Copy of the readme, forensic questions, and users on the flash drive and the host computer (this flash drive should be given to the 5th person after all items are copied)
 9. Highlight/Mark things that are important in the ReadME
