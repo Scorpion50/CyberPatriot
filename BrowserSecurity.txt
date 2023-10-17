@@ -8,9 +8,12 @@
          % YES: Clear History when FireFox Closes
     - Security Tab
          % YES: Warn me when Sites try and install Add-ons
+         % YES: Block dangerous and deceptive content
          % YES: Block Reported Attack Sites
          % YES: Block Reported Web Forgeries
          % NO: Remember Passwords for Sites
+         % Enable Max Protection For Secure DNS
+         % Set Enhanced Tracking Protection to: Strict 
     - Content Tab
          % NO: Enable JavaScript (Unless told to keep it)
          % YES: Block Pop-Up Windows
