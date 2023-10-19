@@ -23,3 +23,5 @@
     - Advanced Encryption
          % YES: Use SSL 3.0
          % YES: Use TLS 1.0
+    - DNS
+        % Set Strictest Security Settings for DNS (Domain Name System)
