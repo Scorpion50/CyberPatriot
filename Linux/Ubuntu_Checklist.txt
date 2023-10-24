@@ -7,6 +7,11 @@ ON START:
 	* WRITE DOWN UNUSUAL THINGS
 
 EASY POINTS:
+-Look for Password and Username files
+	* Plain Text files
+	* Check all of them
+	* cd <file location>
+	* rm <file name>
 - Lock out Root (if it says)
 	* passwd -l root
 - Search for and remove media files (like .mp3, .mp4, .mov, etc.)
