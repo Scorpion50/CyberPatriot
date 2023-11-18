@@ -36,10 +36,12 @@ GROUPS:
 - Add Users to New Groups (if in readme)
 	* sudo gpasswd -a {user} {group}
 
-PASSWORDS:
+SHADOW FILE:
 - Check for bad Admin passwords in ReadMe
 - Change passwords if neccessary
 	* passwd {user to change}
+- Shadow file permitions
+	* chmod 640 /etc/shadow
 
 PASSWORD POLICY:
 - Go to Manage Users
@@ -81,4 +83,7 @@ SPECIAL CASES:
 		$ PermitRootLogin no
 
 
-
+-LOOKUP:
+	* syn cookies
+	* Greeter doesnt enumerate user accounts
+	* FTP ananomus login disabled
