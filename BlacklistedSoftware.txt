@@ -10,3 +10,9 @@ i.	Nikto
 j.	Ophcrack
 k.	Ettercap
 l.	Deluge
+m.  Ftp
+n.  Openvpn
+o.  Aircrack
+p.  Autospy
+q.  Sqlmap
+r.  Rfkill
