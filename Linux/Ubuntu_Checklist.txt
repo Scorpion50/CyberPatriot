@@ -95,10 +95,8 @@ SPECIAL CASES:
 - Apt doesnt work
 	* Software and Updates
 	* Check First 2 boxes
-- Anonymous FTP Login Disabled
-	* Remove FTP from /etc/passwd (unless told FTP is nessisary)
-
-
+-FTP anonymous login Disabled
+	* Remove FTP from /etc/passwd
 -LOOKUP:
 	* syn cookies
 	* Greeter doesnt enumerate user accounts
