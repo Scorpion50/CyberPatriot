@@ -97,8 +97,6 @@ SPECIAL CASES:
 	* Check First 2 boxes
 -FTP anonymous login Disabled
 	* Remove FTP from /etc/passwd
-
-
 -LOOKUP:
 	* syn cookies
 	* Greeter doesnt enumerate user accounts
