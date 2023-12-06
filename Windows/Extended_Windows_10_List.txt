@@ -2,7 +2,7 @@ ExtendedWindows 10 Checklist Version 1
 
 Created by Platte County Cyberpatriot Team A
 
-Windows 10 Checklist v1.2
+Windows 10 Checklist v2.1
 
 WAIT FOR EVERYONE BEFORE BOOTING IMAGE!
 Run CCS Scoring Report (Make sure to run both host and CCS server checks)
@@ -16,7 +16,9 @@ Install updates while reading README
 Install Malwarebytes, BitDefender, CCleaner, IOBitUninstaller
 Get the Internet Browsers that you are supposed to have 
 Get “Script
+Check Task Scheduler 
 Check everything in Window Defender
+Update everything!!!
 Password Policy
 Enforce password history: 24
 Maximum password age: 60
@@ -76,7 +78,7 @@ World Wide Web Services
 If the Windows FTP server is checked make sure that TFTP is not checked(FTP is inside Internet Information Services)
 Uncheck SMB 1.0/CIFS File Sharing Support
 Run Net Share (command prompt) 
-Only 3 shares should be shared unless README says otherwise, if there are more delete them through computer management
+Only 3 shares should be shared unless README says otherwise, if there are more, delete them through computer management
 ADMIN$
 C$
 IPC$
@@ -128,8 +130,16 @@ Shut down the system = Administrators, Users
 Take ownership of file or other objects = Administrators
 Accounts: Limit local use of blank password to console only[enabled]
 Network access: Do not allow anonymous enumeration of SAM accounts [enabled]
+Interactive Login: Don’t require CTRL + ALT + DELETE : disabled
+Interactive Login: Don't display the last signed-in: enabled
 Remote Assistance connections have been disabled (control panel -system)
 Windows FTP service has been stopped and disabled
+SNMP Trap service has been stopped and disabled
+Telephony service has been stopped and disabled
 Make sure that ALL software has been updated
 Check the scoring report and
 You’re Done (with the checklist anyway)
+
+Note regx101.com
+Homework hex dump editor
+Command to find hidden stuff in the users' folder “ Get-ChildItem -Path C:\users -Recurse -Hidden -Filter .git
