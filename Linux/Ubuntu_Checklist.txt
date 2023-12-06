@@ -24,7 +24,6 @@ EASY POINTS:
 - Daily Updates
 	* Software & Updates
 	* Change from Never Upadate to Daily Updates
-	* None to All Updates
 - Check Users
 	*** COPY etc/password and etc/group
 		$ Use the cp command to copy it to Desktop incase you need it
@@ -54,11 +53,14 @@ PASSWORD POLICY:
 	* Change Passwords
 	* gedit (or) nano /etc/pam.d/common-password
 		$ add "remember=5" on the line that says "pam_unix.so"
+
 		$ add password requisite pam_pwquality.so retry=3 minlen=8 maxrepeat=3 ucredit=-1 lcredit=-1 ocredit=-1 dcredit=-1 difok=3 gecoscheck=1 reject_username enforce_for_root
 	* nano /etc/login.defs
 	* PASS_MAX_DAYS = 90
 	* PASS_MIN_DAYS = 30
 	* PASS_WARN_AGE = 7
+=======
+		$ a the line "password requisite pam_pwquality.so retry=3 minlen=12 maxrepeat=3 ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1 difok=3 gecoscheck=1 reject_username enforce_for_root"
 REMOVE PROGRAMS:
 - Check in Applications Menu for Unauthorized Programs
 	* EX: Wireshark, ophcrack, nmap, zenmap, nginx
@@ -96,6 +98,17 @@ SPECIAL CASES:
 - Apt doesnt work
 	* Software and Updates
 	* Check First 2 boxes
+=======
+- No sudo password req
+	* /etc/sudoers
+	* comment out Default !authentication
+-IPv4 Forwarding needs disabled
+	* echo 0 > /proc/sys/net/ipv4/ip_forward
+	* cat /proc/sys/net/ipv4/ip_forward
+	* your good it is a 0
+- Apt is Broken
+	* Software and Updates
+	* Check First 2 boxes at least
 
 -LOOKUP:
 	* syn cookies
